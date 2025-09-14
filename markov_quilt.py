@@ -10,12 +10,14 @@ Patch patterns sourced from https://www.mywebquilter.com/ and manipulated for un
 """
 
 # Defining Transition Matrix: quilt patch patterns = states with specifiecd transition probabilities
+
+# randomized transition matrix
 patch_patterns = {
     "vertical_stripes": {"vertical_stripes": 0.0, "nine_square_checker": 0.0, "calico": 0.1, "four_square_checker": 0.1, "antique": 0.1, "diamond": 0.1, "ninesquarehalfcolor": 0.1, "blue+white": 0.1, "orange_pinwheel": 0.1, "pink_rhombus": 0.1, "half_checker": 0.1, "broken_dishes": 0.1},
     "nine_square_checker": {"vertical_stripes": 0.1, "nine_square_checker": 0.0, "calico": 0.0, "four_square_checker": 0.1, "antique": 0.1, "diamond": 0.1, "ninesquarehalfcolor": 0.1, "blue+white": 0.1, "orange_pinwheel": 0.1, "pink_rhombus": 0.1, "half_checker": 0.1, "broken_dishes": 0.1},
     "calico": {"vertical_stripes": 0.1, "nine_square_checker": 0.1, "calico": 0.0, "four_square_checker": 0.1, "antique": 0.1, "diamond": 0.1, "ninesquarehalfcolor": 0.1, "blue+white": 0.1, "orange_pinwheel": 0.1, "pink_rhombus": 0.1, "half_checker": 0.0, "broken_dishes": 0.1},
-    "four_square_checker": {"vertical_stripes": 0.1, "nine_square_checker": 0.8, "calico": 0.1, "four_square_checker": 0.0, "antique": 0.1, "diamond": 0.1, "ninesquarehalfcolor": 0.0, "blue+white": 0.0, "orange_pinwheel": 0.0, "pink_rhombus": 0.0, "half_checker": 0.0, "broken_dishes": 0.0},
-    "antique": {"vertical_stripes": 0.4, "nine_square_checker": 0.2, "calico": 0.1, "four_square_checker": 0.2, "antique": 0.0, "diamond": 0.1, "ninesquarehalfcolor": 0.1, "blue+white": 0.1, "orange_pinwheel": 0.0, "pink_rhombus": 0.0, "half_checker": 0.0, "broken_dishes": 0.0},
+    "four_square_checker": {"vertical_stripes": 0.1, "nine_square_checker": 0.8, "calico": 0.1, "four_square_checker": 0.0, "antique": 0.0, "diamond": 0.0, "ninesquarehalfcolor": 0.0, "blue+white": 0.0, "orange_pinwheel": 0.0, "pink_rhombus": 0.0, "half_checker": 0.0, "broken_dishes": 0.0},
+    "antique": {"vertical_stripes": 0.4, "nine_square_checker": 0.2, "calico": 0.1, "four_square_checker": 0.2, "antique": 0.0, "diamond": 0.1, "ninesquarehalfcolor": 0.0, "blue+white": 0.0, "orange_pinwheel": 0.0, "pink_rhombus": 0.0, "half_checker": 0.0, "broken_dishes": 0.0},
     "diamond": {"vertical_stripes": 0.0, "nine_square_checker": 0.0, "calico": 0.1, "four_square_checker": 0.2, "antique": 0.4, "diamond": 0.0, "ninesquarehalfcolor": 0.1, "blue+white": 0.0, "orange_pinwheel": 0.0, "pink_rhombus": 0.1, "half_checker": 0.1, "broken_dishes": 0.0},
     "ninesquarehalfcolor": {"vertical_stripes": 0.0, "nine_square_checker": 0.0, "calico": 0.0, "four_square_checker": 0.0, "antique": 0.2, "diamond": 0.1, "ninesquarehalfcolor": 0.0, "blue+white": 0.0, "orange_pinwheel": 0.1, "pink_rhombus": 0.1, "half_checker": 0.1, "broken_dishes": 0.4},
     "blue+white": {"vertical_stripes": 0.3, "nine_square_checker": 0.1, "calico": 0.0, "four_square_checker": 0.0, "antique": 0.1, "diamond": 0.1, "ninesquarehalfcolor": 0.0, "blue+white": 0.0, "orange_pinwheel": 0.1, "pink_rhombus": 0.1, "half_checker": 0.1, "broken_dishes": 0.1},
@@ -25,6 +27,22 @@ patch_patterns = {
     "broken_dishes": {"vertical_stripes": 0.1, "nine_square_checker": 0.1, "calico": 0.1, "four_square_checker": 0.1, "antique": 0.3, "diamond": 0.1, "ninesquarehalfcolor": 0.1, "blue+white": 0.1, "orange_pinwheel": 0.0, "pink_rhombus": 0.0, "half_checker": 0.0, "broken_dishes": 0.0}
 }
 
+
+# cool-toned transition matrix
+# patch_patterns = {
+#     "vertical_stripes": {"vertical_stripes": 0.0, "nine_square_checker": 0.2, "calico": 0.2, "four_square_checker": 0.2, "antique": 0.0, "diamond": 0.0, "ninesquarehalfcolor": 0.0, "blue+white": 0.2, "orange_pinwheel": 0.0, "pink_rhombus": 0.0, "half_checker": 0.0, "broken_dishes": 0.2},
+#     "nine_square_checker": {"vertical_stripes": 0.2, "nine_square_checker": 0.2, "calico": 0.2, "four_square_checker": 0.2, "antique": 0.0, "diamond": 0.0, "ninesquarehalfcolor": 0.0, "blue+white": 0.2, "orange_pinwheel": 0.0, "pink_rhombus": 0.0, "half_checker": 0.0, "broken_dishes": 0.0},
+#     "calico": {"vertical_stripes": 0.2, "nine_square_checker": 0.2, "calico": 0.2, "four_square_checker": 0.2, "antique": 0.0, "diamond": 0.0, "ninesquarehalfcolor": 0.0, "blue+white": 0.0, "orange_pinwheel": 0.0, "pink_rhombus": 0.0, "half_checker": 0.0, "broken_dishes": 0.2},
+#     "four_square_checker": {"vertical_stripes": 0.2, "nine_square_checker": 0.2, "calico": 0.2, "four_square_checker": 0.0, "antique": 0.0, "diamond": 0.0, "ninesquarehalfcolor": 0.0, "blue+white": 0.2, "orange_pinwheel": 0.0, "pink_rhombus": 0.0, "half_checker": 0.0, "broken_dishes": 0.2},
+#     "antique": {"vertical_stripes": 0.2, "nine_square_checker": 0.0, "calico": 0.2, "four_square_checker": 0.2, "antique": 0.0, "diamond": 0.0, "ninesquarehalfcolor": 0.0, "blue+white": 0.2, "orange_pinwheel": 0.0, "pink_rhombus": 0.0, "half_checker": 0.0, "broken_dishes": 0.2},
+#     "diamond": {"vertical_stripes": 0.2, "nine_square_checker": 0.2, "calico": 0.0, "four_square_checker": 0.2, "antique": 0.0, "diamond": 0.0, "ninesquarehalfcolor": 0.0, "blue+white": 0.2, "orange_pinwheel": 0.0, "pink_rhombus": 0.0, "half_checker": 0.0, "broken_dishes": 0.2},
+#     "ninesquarehalfcolor": {"vertical_stripes": 0.2, "nine_square_checker": 0.0, "calico": 0.2, "four_square_checker": 0.2, "antique": 0.0, "diamond": 0.0, "ninesquarehalfcolor": 0.0, "blue+white": 0.2, "orange_pinwheel": 0.0, "pink_rhombus": 0.0, "half_checker": 0.0, "broken_dishes": 0.2},
+#     "blue+white": {"vertical_stripes": 0.2, "nine_square_checker": 0.2, "calico": 0.2, "four_square_checker": 0.2, "antique": 0.0, "diamond": 0.0, "ninesquarehalfcolor": 0.0, "blue+white": 0.0, "orange_pinwheel": 0.0, "pink_rhombus": 0.0, "half_checker": 0.0, "broken_dishes": 0.2},
+#     "orange_pinwheel": {"vertical_stripes": 0.2, "nine_square_checker": 0.2, "calico": 0.2, "four_square_checker": 0.2, "antique": 0.0, "diamond": 0.0, "ninesquarehalfcolor": 0.0, "blue+white": 0.2, "orange_pinwheel": 0.0, "pink_rhombus": 0.0, "half_checker": 0.0, "broken_dishes": 0.0},
+#     "pink_rhombus": {"vertical_stripes": 0.0, "nine_square_checker": 0.2, "calico": 0.2, "four_square_checker": 0.2, "antique": 0.0, "diamond": 0.0, "ninesquarehalfcolor": 0.0, "blue+white": 0.2, "orange_pinwheel": 0.0, "pink_rhombus": 0.0, "half_checker": 0.0, "broken_dishes": 0.2},
+#     "half_checker": {"vertical_stripes": 0.2, "nine_square_checker": 0.0, "calico": 0.2, "four_square_checker": 0.2, "antique": 0.0, "diamond": 0.0, "ninesquarehalfcolor": 0.0, "blue+white": 0.2, "orange_pinwheel": 0.0, "pink_rhombus": 0.0, "half_checker": 0.0, "broken_dishes": 0.2},
+#     "broken_dishes": {"vertical_stripes": 0.2, "nine_square_checker": 0.0, "calico": 0.2, "four_square_checker": 0.2, "antique": 0.0, "diamond": 0.0, "ninesquarehalfcolor": 0.0, "blue+white": 0.2, "orange_pinwheel": 0.0, "pink_rhombus": 0.0, "half_checker": 0.0, "broken_dishes": 0.0},
+# }
 # Isolating pattern names for random selection
 pattern_names = list(patch_patterns.keys())
 
@@ -44,7 +62,7 @@ for patch in quilt:
     patch_visuals.append(img)
 
 # Setting up a mutable index to label the saved output file
-idx = 3
+idx = 1
 
 # Displaying the generated quilt pattern using matplotlib
 for i, img in enumerate(patch_visuals):
