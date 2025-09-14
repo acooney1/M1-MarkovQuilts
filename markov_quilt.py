@@ -78,14 +78,14 @@ for patch in quilt:
     img = Image.open(f"assets/{patch}.png")
     patch_visuals.append(img)
 
-# setting up a mutable index to label the saved output file
-idx = 5
-
 # displaying the generated quilt pattern using matplotlib
 for i, img in enumerate(patch_visuals):
     plt.subplot(8, 6, i + 1)
     plt.imshow(img)
     plt.axis('off')
+
+# setting up a mutable index to label the saved output file
+idx = 5
 
 # saving the generated quilt pattern as a single image to the examples folder
 output_path = f"examples/generated_quilt({idx}).png"
