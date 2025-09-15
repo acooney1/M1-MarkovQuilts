@@ -63,8 +63,14 @@ patch_patterns = {
 # Isolating pattern names for random selection in list form.
 pattern_names = list(patch_patterns.keys())
 
-# Generative function to call the next patch based upon the above transition matrix.
+
 def get_next_patch(current_patch="vertical_stripes"):
+    """Generative function to call the next patch based upon the above transition matrix.
+    Args:
+        current_patch (str, optional): The starting patch pattern. Defaults to "vertical_stripes".
+    Returns:
+        list: A list of patch patterns forming the quilt.
+    """
     next_patch = random.choices(pattern_names, [patch_patterns[current_patch][next_patch] for next_patch in pattern_names], k=48)
     return next_patch
 
