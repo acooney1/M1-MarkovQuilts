@@ -1,6 +1,7 @@
 # M1-MarkovQuilts
 
-1. MarkovQuilts
+1. **MarkovQuilts**
+
 This computational system is titled MarkovQuilts, and offers users a baseline system for digital quilt-making! Markov chains are the engine behind this system, as patch designs can be uploaded to the repository and then be assigned specific transition proabilities.
 The transition matrix in this system acts as a "design dial," allowing each user to tailor their quilt generation to their personal preferences. Changing the transition probabilities of a given matrix has immediate and visual design impacts. For example, increasing the probability of a given patch following itself will increase clustering and changing the starting patch will inherently alter the quilting process. Furthermore, different patch images can be uploaded to the assets folder, which changes the building blocks of the quilting system and can have significant impact on contrast and visual aesthetic. Three template matrices have been created to offer a starting point for multiple strategies of quilting. 
 
@@ -10,7 +11,7 @@ The other matrices reflect a more rules-based design structure, as the matrices 
 
 The possibilities for expansion of this system are numerous, as additional matrices could be designed to specifically investigate symmetry, unity, and shapes.
 
-2. Set-up + Running Code
+2. **Set-up + Running Code**
 
 This public repository can be utilized to generate digital patchwork quilts, using Python scripts and libraries. Necessary libraries/imports include pillow, random, and matplotlib. If pillow is not yet installed on a machine, open a terminal window and run the following command: python3 -m pip install Pillow
 
@@ -18,10 +19,12 @@ Other imports include matplotlib, an open-source Python library helpful for stat
 functions to generate random numbers and utilize random operations. These imports are included in the markov_quilt.py script.
 
 **markov_quilt.py**: the main Python script in this computationally creative system -- contains mutable transition matrix to be used as the design. Overall workflow runs as follows: starting patch is hard-coded by user, then next patches are generated according to transition matrix. Images are pulled from the *assets* folder to prepare for visual generation. An 8x6 subplot is generated using matplotlib to visually model the quilt. Dimensions can be altered by the user depending on desired quilt size. Index variable (idx) can be edited to reflect the specific quilt generated (number identity helps to keep each design unique and traceable). When the markov_quilt script is executed, the output is then saved with the unique number identifier to the *examples* folder.
+
 **assets**: a folder housing the patch designs to be utilized
+
 **examples**: storage folder for saved outputs -- example quilts generated using different transition matrices
 
-3. System Motivation/Inspiration
+3. **System Motivation/Inspiration**
 
 My primary motivation for creating the MarkovQuilts system is in technical pursuit of a long-standing goal to attempt to learn how to knit/sew/crochet and craft. About two yeara ago, I learned how to hand-knit a chunky blanket and fell in love with it. However, since then, I have not had the chance to explore quilting on my own. This project, focused on using Markov chains to generate visual aret, felt like an apt time to digitize this goal of mine.  quilts or other items. I chose to model quilts simply because of their storytelling capabilities and unique style. Each quilt created inherently models the creator's journey as each patch is stitched to another. They are a physical display of change or consistency over time, as made evident by either their uniform or improvised style. For the purpose of this assignment, I felt as though I could take the first few steps toward my goal by creating a template for digital quilt generation. The system is purposefully designed with an easy-to-personalize design, so that each user can add patches they wish to make up the parts of their quilt. In other words, the system is designed to aid the personal storytelling of each user.
 
@@ -29,6 +32,6 @@ Working on this system challenged me as a computer scientist both conceptually a
 
 In regard to the creativity of my system, I believe it demonstrates p-creativity because for each user, the quilt they generate with the patches they choose to upload is psychologically creative for them. It allows for a personal storytelling process via digital quilt generation. For example, my favorite of the quilts I generated is the one with cool tones of blue. I love that quilt because blue is my favorite color, but also because some of the cooler patch designs I chose remind me of the ocean and swimming, which I love to do. I also think that my system is novel as it puts a new spin on a historically significant process deeply roted in tradition. This digital angle offers a new way to appreciate such beautiful art, giving it value. For those reasons, I would hope that my system is considered p-creative and creative in the way that it offers novelty and value to the computaitonally creative world.
 
-4. Acknowledgements
+4. **Acknowledgements**
 
 Sources include https://www.mywebquilter.com/ for initial patch template inventory and https://matplotlib.org/ for function details and library capabilities utilized (tight_layout). Interpersonal sources include discussion with classmate Logan and Professor Harmon.
